@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>PinPoint — Live Location Safety Network</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="logo">P</div>
+    <div class="brand">Pin<span>Point</span></div>
+    <div class="pill">LIVE</div>
+  </div>
+
+  <h1>Your location, <em>relayed to units</em> the moment you need it.</h1>
+  <p class="sub">PinPoint streams your live GPS, IP and device signature to the nearest responding department. One tap. No calls. No typing.</p>
+
+  <div class="trust">
+    <span class="tchip"><span class="dot"></span><b>100+</b> departments</span>
+    <span class="tchip"><b>3,000</b> people signed up</span>
+    <span class="tchip">End-to-end relay</span>
+  </div>
+
+  <div class="card">
+    <div class="statrow">
+      <div class="stat"><b id="sUnits">—</b><small>Units near</small></div>
+      <div class="stat"><b id="sAcc">—</b><small>Accuracy</small></div>
+      <div class="stat"><b id="sEta">—</b><small>Relay ETA</small></div>
+    </div>
+
+    <button class="btn btn-primary" id="armBtn">Enable location</button>
+    <button class="btn btn-alert" id="alertBtn">🚨 SEND ALERT</button>
+
+    <div class="status" id="status"><span class="dot"></span><span id="statusText">Idle — awaiting permission</span></div>
+
+    <div class="grid" id="grid" style="display:none">
+      <div class="cell"><small>Latitude</small><span id="dLat">—</span></div>
+      <div class="cell"><small>Longitude</small><span id="dLon">—</span></div>
+      <div class="cell"><small>Accuracy</small><span id="dAcc">—</span></div>
+      <div class="cell"><small>Fingerprint</small><span id="dFp">—</span></div>
+      <div class="cell" style="grid-column:1/-1"><small>Address</small><span id="dAddr">—</span></div>
+      <div class="cell" style="grid-column:1/-1"><small>IP</small><span id="dIp">—</span></div>
+    </div>
+
+    <div class="log" id="log"></div>
+  </div>
+
+  <div class="depts">
+    <h3>Trusted by responding departments</h3>
+    <div class="deptlist" id="deptlist"></div>
+  </div>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

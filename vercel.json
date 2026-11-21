@@ -1,0 +1,3 @@
+{
+  "rewrites": [{ "source": "/api/alert", "destination": "/api/alert" }]
+}
